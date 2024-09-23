@@ -1,0 +1,10 @@
+#MULTIPLEXER 2 INGRESSI 2 BIT
+.model MUX2_2
+.inputs xr i1 i0 w1 w0
+.outputs op1 op0
+.subckt MUX2_1 s=xr a=i1 b=w1 o=op1
+.subckt MUX2_1 s=xr a=i0 b=w0 o=op0
+
+.end
+.search MUX2_1.blif
+

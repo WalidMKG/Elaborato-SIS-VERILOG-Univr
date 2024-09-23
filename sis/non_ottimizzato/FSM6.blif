@@ -1,0 +1,32 @@
+.model FSM
+.inputs INIZIA VANTAGGIO finite_manche MIN_MANCHE_OK
+.outputs PLAY
+.latch    [5264] LatchOut_v4   1
+.start_kiss
+.i 4
+.o 1
+.p 7
+.s 1
+.r S0
+000- S0 S0 0
+001- S0 S0 0
+0100 S0 S0 0
+0101 S0 S0 0
+0110 S0 S0 0
+0111 S0 S0 0
+1--- S0 S0 1
+.end_kiss
+.latch_order LatchOut_v4
+.code S0 1
+.names [5264]
+ 1
+.names INIZIA PLAY
+1 1
+.exdc 
+.inputs INIZIA VANTAGGIO finite_manche MIN_MANCHE_OK LatchOut_v4
+.outputs [5264] PLAY
+.names LatchOut_v4 [5264]
+0 1
+.names LatchOut_v4 PLAY
+0 1
+.end

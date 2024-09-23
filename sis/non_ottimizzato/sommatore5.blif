@@ -1,0 +1,10 @@
+.model sommatore5
+.inputs a4 a3 a2 a1 a0 b4 b3 b2 b1 b0 CIN
+.outputs o4 o3 o2 o1 o0 cout
+.subckt SOMMATORE A=a0 B=b0 O=o0 CIN=CIN COUT=c0
+.subckt SOMMATORE A=a1 B=b1 O=o1 CIN=c0 COUT=c1
+.subckt SOMMATORE A=a2 B=b2 O=o2 CIN=c1 COUT=c2
+.subckt SOMMATORE A=a3 B=b3 O=o3 CIN=c2 COUT=c3
+.subckt SOMMATORE A=a4 B=b4 O=o4 CIN=c3 COUT=cout
+.end
+.search Somma.blif

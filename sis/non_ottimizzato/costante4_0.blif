@@ -1,0 +1,9 @@
+#COSTANTE 0 SU 4 BIT
+.model costante4_0
+.outputs o3 o2 o1 o0
+.names o3
+.names o2
+.names o1
+.names o0
+.end
+

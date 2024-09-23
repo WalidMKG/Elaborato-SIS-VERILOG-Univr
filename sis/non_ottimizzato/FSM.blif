@@ -1,0 +1,17 @@
+.model FSM
+.inputs INIZIA VANTAGGIO finite_manche MIN_MANCHE_OK
+.outputs PLAY
+.start_kiss
+.i 4
+.o 1
+.s 2
+.r ATTESA
+.p 6
+1--- ATTESA GIOCA 1
+0--- ATTESA ATTESA 0
+1--- GIOCA GIOCA 1
+01-1 GIOCA ATTESA 0
+0-1- GIOCA ATTESA 0
+000- GIOCA GIOCA 0
+.end_kiss
+.end

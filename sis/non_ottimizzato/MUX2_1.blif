@@ -1,0 +1,7 @@
+.model MUX2_1
+.inputs s a b
+.outputs o 
+.names s a b o 
+01- 1
+1-1 1
+.end

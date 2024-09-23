@@ -1,0 +1,25 @@
+.model MAGUGU
+.inputs A4 A3 A2 A1 A0 B4 B3 B2 B1 B0
+.outputs MU U
+.subckt xor A=A4 B=B4 X=X4
+.subckt xor A=A3 B=B3 X=X3
+.subckt xor A=A2 B=B2 X=X2
+.subckt xor A=A1 B=B1 X=X1
+.subckt xor A=A0 B=B0 X=X0
+
+.subckt UGUALE5 A4=A4 A3=A3 A2=A2 A1=A1 A0=A0 B4=B4 B3=B3 B2=B2 B1=B1 B0=B0 O=U
+.names A4 A3 A2 A1 A0 X4 X3 X2 X1 X0 AgtB
+1----1---- 1
+-1---01--- 1
+--1--001-- 1
+---1-0001- 1
+----100001 1
+.names AgtB U MU
+01 1
+11 1
+10 1
+.end
+.search xor.blif
+.search UGUALE5.blif
+
+

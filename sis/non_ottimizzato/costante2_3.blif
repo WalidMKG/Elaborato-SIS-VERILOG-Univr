@@ -1,0 +1,10 @@
+#3 SU 2 bit
+.model costante2_3
+.outputs  o1 o0
+.names o1
+1
+.names o0
+1
+
+.end
+

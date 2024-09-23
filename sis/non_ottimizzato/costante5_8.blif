@@ -1,0 +1,10 @@
+#8 SU 5 bit
+.model costante5_8
+.outputs o4 o3 o2 o1 o0
+.names o4
+.names o3
+1
+.names o2
+.names o1
+.names o0
+.end

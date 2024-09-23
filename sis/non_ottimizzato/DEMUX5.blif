@@ -1,0 +1,13 @@
+
+.model DEMUX5 
+.inputs S1 S0 IN4 IN3 IN2 IN1 IN0
+.outputs X4 X3 X2 X1 X0 Y4 Y3 Y2 Y1 Y0
+.subckt DEMUX S1=S1 S0=S0 IN=IN4 X=X4 Y=Y4
+.subckt DEMUX S1=S1 S0=S0 IN=IN3 X=X3 Y=Y3
+.subckt DEMUX S1=S1 S0=S0 IN=IN2 X=X2 Y=Y2
+.subckt DEMUX S1=S1 S0=S0 IN=IN1 X=X1 Y=Y1
+.subckt DEMUX S1=S1 S0=S0 IN=IN0 X=X0 Y=Y0
+
+.end
+
+.search DEMUX.blif

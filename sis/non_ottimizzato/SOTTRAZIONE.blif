@@ -1,0 +1,34 @@
+
+.model sottrazione
+.inputs A4 A3 A2 A1 A0 B4 B3 B2 B1 B0 
+.outputs O4 O3 O2 O1 O0 OF 
+
+
+
+
+.names zero
+0
+
+.names uno
+1
+
+# Nega B
+.subckt not A=B0 O=R0
+.subckt not A=B1 O=R1
+.subckt not A=B2 O=R2
+.subckt not A=B3 O=R3
+.subckt not A=B4 O=R4
+
+# Somma 1 al negato di B
+.subckt sommatore5 CIN=zero a4=zero a3=zero a2=zero a1=zero a0=uno b4=R4 b3=R3 b2=R2 b1=R1 b0=R0 o4=C24 o3=C23 o2=C22 o1=C21 o0=C20
+
+# Somma A e il complemento 2 di B
+.subckt sommatore5 CIN=zero a4=A4 a3=A3 a2=A2 a1=A1 a0=A0 b4=C24 b3=C23 b2=C22 b1=C21 b0=C20  o4=O4 o3=O3 o2=O2 o1=O1 o0=O0 cout=OF
+
+.end
+
+.search not1.blif
+.search sommatore5.blif
+
+
+
